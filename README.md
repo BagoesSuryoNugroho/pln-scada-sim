@@ -18,7 +18,7 @@ Peserta cukup memanggil API dari n8n; tidak ada yang perlu diinstal di laptop me
 | `data/` | Dataset hasil generate (CSV/CSV.gz) |
 | `kb/` | 7 dokumen SOP/IK fiktif untuk vector store (disajikan API di `/api/v1/kb`) |
 | `n8n_datatables/` | CSV siap impor ke n8n Data Tables: uji chatbot, contoh kronologi |
-| `tests/smoke_test.py` | 36 cek otomatis untuk semua endpoint |
+| `tests/smoke_test.py` | 40 cek otomatis untuk semua endpoint |
 | `KUNCI_TRAINER.md` | Pola yang ditanam, jadwal kejadian "live", kunci jawaban (jangan dibagikan ke peserta) |
 
 ## Jalankan di laptop (trainer)
@@ -26,7 +26,7 @@ Peserta cukup memanggil API dari n8n; tidak ada yang perlu diinstal di laptop me
 ```bash
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python tests/smoke_test.py                              # opsional, 36 cek
+python tests/smoke_test.py                              # opsional, 40 cek
 uvicorn app.main:app --reload
 # buka http://localhost:8000/docs, klik Authorize, isi: dev-key
 ```
@@ -99,6 +99,16 @@ Mode default membaca CSV, jadi MySQL tidak wajib. Tambahkan bila ingin mendemoka
 | `GET /raw/events`, `/raw/telemetry` | Feed kotor: duplikat, waktu UTC/lokal campur, V/kV, kW/MW, 9999, null | Hari 2 Blok 3 |
 
 Format daftar: `{"data": [...], "page": 1, "page_size": 50, "total": 137, "next_page": 2}`.
+
+## Skrip operasi (folder `scripts/`)
+
+| Skrip | Fungsi |
+|---|---|
+| `scripts/rotate_keys.sh` | Membuat key acak baru (grup-1..4 + trainer), menyimpannya di `.secrets/` (izin 600, masuk `.gitignore`), mengubah `API_KEYS` di Railway lewat stdin, lalu memverifikasi (key baru diterima, `dev-key` dan key lama ditolak) |
+| `scripts/update_code.sh` | Menyalin versi kode terbaru ke repo lokal (tanpa menghapus apa pun), menjalankan smoke test, commit, lalu deploy (`push`, `up`, atau `none`) |
+
+Pakai `bash scripts/<nama>.sh --help` untuk daftar opsi. Keduanya mendukung `--dry-run`.
+Kedua skrip selalu memakai `--service pln-scada-sim` secara eksplisit karena `railway link` bisa saja tertaut ke service MySQL.
 
 ## Konfigurasi di n8n
 

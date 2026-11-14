@@ -50,13 +50,26 @@ store = DataStore.from_env()
 
 # ------------------------------------------------------------------ auth
 def _load_keys() -> dict[str, str]:
-    """API_KEYS="grup-a:KEY1,grup-b:KEY2,trainer:KEY3"  ->  {KEY1: grup-a, ...}"""
+    """API_KEYS="grup-a:KEY1,grup-b:KEY2,trainer:KEY3"  ->  {KEY1: grup-a, ...}
+
+    - Tanda kutip yang ikut tertempel dibuang.
+    - Kosong sama sekali -> mode dev (key "dev-key").
+    - Terisi tetapi tidak ada satu pun entri "nama:key" yang valid -> gagal start,
+      supaya salah format tidak diam-diam jatuh ke key bawaan.
+    """
     raw = os.getenv("API_KEYS", "")
-    keys = {}
+    keys: dict[str, str] = {}
     for part in raw.split(","):
-        if ":" in part:
-            name, key = part.split(":", 1)
-            keys[key.strip()] = name.strip()
+        part = part.strip().strip("\"'")
+        if ":" not in part:
+            continue
+        name, key = part.split(":", 1)
+        name, key = name.strip().strip("\"'"), key.strip().strip("\"'")
+        if name and key:
+            keys[key] = name
+    if raw.strip() and not keys:
+        raise RuntimeError("API_KEYS terisi tetapi tidak ada entri berformat nama:key. "
+                           "Contoh: grup-1:KEYACAK1,grup-2:KEYACAK2,trainer:KEYACAK3")
     if not keys:
         keys = {"dev-key": "dev"}
     return keys
@@ -120,7 +133,8 @@ Page = Query(1, ge=1, description="Nomor halaman, mulai dari 1")
 def health():
     now = store.now()
     return {"status": "ok", "waktu_simulasi_wita": (now + pd.Timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S") + "+08:00",
-            "backend": os.getenv("DATA_BACKEND", "csv"), "catatan": "Data fiktif untuk pelatihan"}
+            "backend": os.getenv("DATA_BACKEND", "csv"), "kunci_dimuat": len(API_KEYS),
+            "kunci_bawaan_aktif": "dev-key" in API_KEYS, "catatan": "Data fiktif untuk pelatihan"}
 
 
 @app.get("/api/v1/substations", tags=["Master"], summary="Daftar gardu induk")

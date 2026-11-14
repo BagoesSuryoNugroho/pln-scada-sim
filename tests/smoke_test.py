@@ -35,7 +35,18 @@ except HTTPException as e: check("403 key salah", e.status_code == 403)
 check("key valid -> nama grup", M.require_key("key-a") == "grup-a")
 
 g = "grup-a"
-check("health", call("GET", "/health")["status"] == "ok")
+h = call("GET", "/health")
+check("health", h["status"] == "ok" and h["kunci_dimuat"] == 2 and h["kunci_bawaan_aktif"] is False, str(h["kunci_dimuat"]) + " key")
+_old = os.environ.get("API_KEYS")
+def keys_for(v):
+    os.environ["API_KEYS"] = v
+    try: return M._load_keys()
+    finally: os.environ["API_KEYS"] = _old
+check("API_KEYS kosong -> dev-key", keys_for("") == {"dev-key": "dev"})
+check("API_KEYS valid dipecah", keys_for("a:K1,b:K2") == {"K1": "a", "K2": "b"})
+check("API_KEYS bertanda kutip dibersihkan", keys_for('"a:K1,b:K2"') == {"K1": "a", "K2": "b"})
+try: keys_for("K1,K2"); check("API_KEYS tanpa nama:key gagal start", False)
+except RuntimeError: check("API_KEYS tanpa nama:key gagal start", True)
 check("substations 8", len(call("GET", "/api/v1/substations", grup=g)["data"]) == 8)
 check("bays trafo", len(call("GET", "/api/v1/bays", gi_id="PTR", jenis="TRAFO", grup=g)["data"]) == 2)
 check("points TM LSR", len(call("GET", "/api/v1/points", gi_id="LSR", kategori="TM", grup=g)["data"]) > 5)
