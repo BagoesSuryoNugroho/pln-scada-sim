@@ -1,0 +1,4 @@
+tests/stubs
+__pycache__
+*.pyc
+.env

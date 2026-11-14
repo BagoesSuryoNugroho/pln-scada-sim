@@ -1,0 +1,9 @@
+gi_id,nama,level_kv,media_kom,rtu_tipe,subsistem
+LSR,GI Losari (sim),150,FO,RTU-X200 (fiktif),SULBAGSEL
+KRB,GI Karebosi (sim),150,FO,RTU-X200 (fiktif),SULBAGSEL
+SMB,GI Somba Opu (sim),150,FO,GW-SAS-61850 (fiktif),SULBAGSEL
+PTR,GI Paotere (sim),150,FO,RTU-X200 (fiktif),SULBAGSEL
+LAE,GI Lae-Lae (sim),150,RADIO,RTU-M10 (fiktif),SULBAGSEL
+SML,GI Samalona (sim),150,RADIO,RTU-M10 (fiktif),SULBAGSEL
+BTM,GI Bantimurung (sim),150,PLC,RTU-X200 (fiktif),SULBAGSEL
+MLN,GI Malino (sim),150,RADIO,RTU-M10 (fiktif),SULBAGSEL

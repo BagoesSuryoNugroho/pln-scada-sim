@@ -1,0 +1,182 @@
+point_id,gi_id,bay_id,kategori,besaran,satuan,batas_atas,batas_bawah,deskripsi,ada_histori
+LSR.PHT_KRB1.MW,LSR,LSR-PHT-KRB1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Karebosi (sim) #1,True
+LSR.PHT_KRB1.MVAR,LSR,LSR-PHT-KRB1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+LSR.PHT_KRB1.A,LSR,LSR-PHT-KRB1,TM,A,A,800.0,0.0,Arus,False
+LSR.PHT_KRB1.CB,LSR,LSR-PHT-KRB1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+LSR.PHT_KRB1.PROT,LSR,LSR-PHT-KRB1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+LSR.PHT_KRB2.MW,LSR,LSR-PHT-KRB2,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Karebosi (sim) #2,True
+LSR.PHT_KRB2.MVAR,LSR,LSR-PHT-KRB2,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+LSR.PHT_KRB2.A,LSR,LSR-PHT-KRB2,TM,A,A,800.0,0.0,Arus,False
+LSR.PHT_KRB2.CB,LSR,LSR-PHT-KRB2,TS,CB_STATUS,,,,Status PMT 150 kV,False
+LSR.PHT_KRB2.PROT,LSR,LSR-PHT-KRB2,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+LSR.PHT_SMB1.MW,LSR,LSR-PHT-SMB1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Somba Opu (sim) #1,True
+LSR.PHT_SMB1.MVAR,LSR,LSR-PHT-SMB1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+LSR.PHT_SMB1.A,LSR,LSR-PHT-SMB1,TM,A,A,800.0,0.0,Arus,False
+LSR.PHT_SMB1.CB,LSR,LSR-PHT-SMB1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+LSR.PHT_SMB1.PROT,LSR,LSR-PHT-SMB1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+KRB.PHT_PTR1.MW,KRB,KRB-PHT-PTR1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Paotere (sim) #1,True
+KRB.PHT_PTR1.MVAR,KRB,KRB-PHT-PTR1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+KRB.PHT_PTR1.A,KRB,KRB-PHT-PTR1,TM,A,A,800.0,0.0,Arus,False
+KRB.PHT_PTR1.CB,KRB,KRB-PHT-PTR1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+KRB.PHT_PTR1.PROT,KRB,KRB-PHT-PTR1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+SMB.PHT_MLN1.MW,SMB,SMB-PHT-MLN1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Malino (sim) #1,True
+SMB.PHT_MLN1.MVAR,SMB,SMB-PHT-MLN1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+SMB.PHT_MLN1.A,SMB,SMB-PHT-MLN1,TM,A,A,800.0,0.0,Arus,False
+SMB.PHT_MLN1.CB,SMB,SMB-PHT-MLN1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+SMB.PHT_MLN1.PROT,SMB,SMB-PHT-MLN1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+PTR.PHT_BTM1.MW,PTR,PTR-PHT-BTM1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Bantimurung (sim) #1,True
+PTR.PHT_BTM1.MVAR,PTR,PTR-PHT-BTM1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+PTR.PHT_BTM1.A,PTR,PTR-PHT-BTM1,TM,A,A,800.0,0.0,Arus,False
+PTR.PHT_BTM1.CB,PTR,PTR-PHT-BTM1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+PTR.PHT_BTM1.PROT,PTR,PTR-PHT-BTM1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+BTM.PHT_MLN1.MW,BTM,BTM-PHT-MLN1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Malino (sim) #1,True
+BTM.PHT_MLN1.MVAR,BTM,BTM-PHT-MLN1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+BTM.PHT_MLN1.A,BTM,BTM-PHT-MLN1,TM,A,A,800.0,0.0,Arus,False
+BTM.PHT_MLN1.CB,BTM,BTM-PHT-MLN1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+BTM.PHT_MLN1.PROT,BTM,BTM-PHT-MLN1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+LAE.PHT_LSR1.MW,LAE,LAE-PHT-LSR1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Losari (sim) #1,True
+LAE.PHT_LSR1.MVAR,LAE,LAE-PHT-LSR1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+LAE.PHT_LSR1.A,LAE,LAE-PHT-LSR1,TM,A,A,800.0,0.0,Arus,False
+LAE.PHT_LSR1.CB,LAE,LAE-PHT-LSR1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+LAE.PHT_LSR1.PROT,LAE,LAE-PHT-LSR1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+SML.PHT_SMB1.MW,SML,SML-PHT-SMB1,TM,MW,MW,180.0,-180.0,Daya aktif penghantar ke GI Somba Opu (sim) #1,True
+SML.PHT_SMB1.MVAR,SML,SML-PHT-SMB1,TM,MVAR,MVAR,90.0,-90.0,Daya reaktif,False
+SML.PHT_SMB1.A,SML,SML-PHT-SMB1,TM,A,A,800.0,0.0,Arus,False
+SML.PHT_SMB1.CB,SML,SML-PHT-SMB1,TS,CB_STATUS,,,,Status PMT 150 kV,False
+SML.PHT_SMB1.PROT,SML,SML-PHT-SMB1,TS,PROTEKSI,,,,Sinyal relay distance & A/R,False
+LSR.TRF1.MW,LSR,LSR-TRF-1,TM,MW,MW,54.0,0.0,Beban trafo 1 (60 MVA),True
+LSR.TRF1.MVAR,LSR,LSR-TRF-1,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+LSR.TRF1.TAP,LSR,LSR-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+LSR.TRF1.TEMP_OIL,LSR,LSR-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+LSR.TRF1.CB,LSR,LSR-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+LSR.TRF1.PROT,LSR,LSR-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+LSR.TRF2.MW,LSR,LSR-TRF-2,TM,MW,MW,54.0,0.0,Beban trafo 2 (60 MVA),True
+LSR.TRF2.MVAR,LSR,LSR-TRF-2,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+LSR.TRF2.TAP,LSR,LSR-TRF-2,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+LSR.TRF2.TEMP_OIL,LSR,LSR-TRF-2,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+LSR.TRF2.CB,LSR,LSR-TRF-2,TS,CB_STATUS,,,,Status PMT trafo,False
+LSR.TRF2.PROT,LSR,LSR-TRF-2,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+KRB.TRF1.MW,KRB,KRB-TRF-1,TM,MW,MW,54.0,0.0,Beban trafo 1 (60 MVA),True
+KRB.TRF1.MVAR,KRB,KRB-TRF-1,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+KRB.TRF1.TAP,KRB,KRB-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+KRB.TRF1.TEMP_OIL,KRB,KRB-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+KRB.TRF1.CB,KRB,KRB-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+KRB.TRF1.PROT,KRB,KRB-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+KRB.TRF2.MW,KRB,KRB-TRF-2,TM,MW,MW,54.0,0.0,Beban trafo 2 (60 MVA),True
+KRB.TRF2.MVAR,KRB,KRB-TRF-2,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+KRB.TRF2.TAP,KRB,KRB-TRF-2,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+KRB.TRF2.TEMP_OIL,KRB,KRB-TRF-2,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+KRB.TRF2.CB,KRB,KRB-TRF-2,TS,CB_STATUS,,,,Status PMT trafo,False
+KRB.TRF2.PROT,KRB,KRB-TRF-2,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+SMB.TRF1.MW,SMB,SMB-TRF-1,TM,MW,MW,54.0,0.0,Beban trafo 1 (60 MVA),True
+SMB.TRF1.MVAR,SMB,SMB-TRF-1,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+SMB.TRF1.TAP,SMB,SMB-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+SMB.TRF1.TEMP_OIL,SMB,SMB-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+SMB.TRF1.CB,SMB,SMB-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+SMB.TRF1.PROT,SMB,SMB-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+SMB.TRF2.MW,SMB,SMB-TRF-2,TM,MW,MW,54.0,0.0,Beban trafo 2 (60 MVA),True
+SMB.TRF2.MVAR,SMB,SMB-TRF-2,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+SMB.TRF2.TAP,SMB,SMB-TRF-2,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+SMB.TRF2.TEMP_OIL,SMB,SMB-TRF-2,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+SMB.TRF2.CB,SMB,SMB-TRF-2,TS,CB_STATUS,,,,Status PMT trafo,False
+SMB.TRF2.PROT,SMB,SMB-TRF-2,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+PTR.TRF1.MW,PTR,PTR-TRF-1,TM,MW,MW,54.0,0.0,Beban trafo 1 (60 MVA),True
+PTR.TRF1.MVAR,PTR,PTR-TRF-1,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+PTR.TRF1.TAP,PTR,PTR-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+PTR.TRF1.TEMP_OIL,PTR,PTR-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+PTR.TRF1.CB,PTR,PTR-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+PTR.TRF1.PROT,PTR,PTR-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+PTR.TRF2.MW,PTR,PTR-TRF-2,TM,MW,MW,54.0,0.0,Beban trafo 2 (60 MVA),True
+PTR.TRF2.MVAR,PTR,PTR-TRF-2,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+PTR.TRF2.TAP,PTR,PTR-TRF-2,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+PTR.TRF2.TEMP_OIL,PTR,PTR-TRF-2,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+PTR.TRF2.CB,PTR,PTR-TRF-2,TS,CB_STATUS,,,,Status PMT trafo,False
+PTR.TRF2.PROT,PTR,PTR-TRF-2,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+LAE.TRF1.MW,LAE,LAE-TRF-1,TM,MW,MW,27.0,0.0,Beban trafo 1 (30 MVA),True
+LAE.TRF1.MVAR,LAE,LAE-TRF-1,TM,MVAR,MVAR,15.0,-10.0,Daya reaktif trafo,False
+LAE.TRF1.TAP,LAE,LAE-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+LAE.TRF1.TEMP_OIL,LAE,LAE-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+LAE.TRF1.CB,LAE,LAE-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+LAE.TRF1.PROT,LAE,LAE-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+SML.TRF1.MW,SML,SML-TRF-1,TM,MW,MW,27.0,0.0,Beban trafo 1 (30 MVA),True
+SML.TRF1.MVAR,SML,SML-TRF-1,TM,MVAR,MVAR,15.0,-10.0,Daya reaktif trafo,False
+SML.TRF1.TAP,SML,SML-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+SML.TRF1.TEMP_OIL,SML,SML-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+SML.TRF1.CB,SML,SML-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+SML.TRF1.PROT,SML,SML-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+BTM.TRF1.MW,BTM,BTM-TRF-1,TM,MW,MW,54.0,0.0,Beban trafo 1 (60 MVA),True
+BTM.TRF1.MVAR,BTM,BTM-TRF-1,TM,MVAR,MVAR,30.0,-10.0,Daya reaktif trafo,False
+BTM.TRF1.TAP,BTM,BTM-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+BTM.TRF1.TEMP_OIL,BTM,BTM-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+BTM.TRF1.CB,BTM,BTM-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+BTM.TRF1.PROT,BTM,BTM-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+MLN.TRF1.MW,MLN,MLN-TRF-1,TM,MW,MW,27.0,0.0,Beban trafo 1 (30 MVA),True
+MLN.TRF1.MVAR,MLN,MLN-TRF-1,TM,MVAR,MVAR,15.0,-10.0,Daya reaktif trafo,False
+MLN.TRF1.TAP,MLN,MLN-TRF-1,TM,TAP,,17.0,1.0,Posisi tap OLTC,False
+MLN.TRF1.TEMP_OIL,MLN,MLN-TRF-1,TM,TEMP_OIL,degC,85.0,0.0,"Suhu minyak atas (alarm 85, trip 95)",True
+MLN.TRF1.CB,MLN,MLN-TRF-1,TS,CB_STATUS,,,,Status PMT trafo,False
+MLN.TRF1.PROT,MLN,MLN-TRF-1,TS,PROTEKSI,,,,"Differential, Buchholz, suhu",False
+LSR.PYL01.A,LSR,LSR-PYL-01,TM,A,A,400.0,0.0,Arus penyulang,False
+LSR.PYL01.CB,LSR,LSR-PYL-01,TS,CB_STATUS,,,,Status PMT 20 kV,False
+LSR.PYL01.PROT,LSR,LSR-PYL-01,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+LSR.PYL02.A,LSR,LSR-PYL-02,TM,A,A,400.0,0.0,Arus penyulang,False
+LSR.PYL02.CB,LSR,LSR-PYL-02,TS,CB_STATUS,,,,Status PMT 20 kV,False
+LSR.PYL02.PROT,LSR,LSR-PYL-02,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+KRB.PYL03.A,KRB,KRB-PYL-03,TM,A,A,400.0,0.0,Arus penyulang,False
+KRB.PYL03.CB,KRB,KRB-PYL-03,TS,CB_STATUS,,,,Status PMT 20 kV,False
+KRB.PYL03.PROT,KRB,KRB-PYL-03,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+KRB.PYL04.A,KRB,KRB-PYL-04,TM,A,A,400.0,0.0,Arus penyulang,True
+KRB.PYL04.CB,KRB,KRB-PYL-04,TS,CB_STATUS,,,,Status PMT 20 kV,False
+KRB.PYL04.PROT,KRB,KRB-PYL-04,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+SMB.PYL06.A,SMB,SMB-PYL-06,TM,A,A,400.0,0.0,Arus penyulang,False
+SMB.PYL06.CB,SMB,SMB-PYL-06,TS,CB_STATUS,,,,Status PMT 20 kV,False
+SMB.PYL06.PROT,SMB,SMB-PYL-06,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+SMB.PYL07.A,SMB,SMB-PYL-07,TM,A,A,400.0,0.0,Arus penyulang,True
+SMB.PYL07.CB,SMB,SMB-PYL-07,TS,CB_STATUS,,,,Status PMT 20 kV,False
+SMB.PYL07.PROT,SMB,SMB-PYL-07,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+PTR.PYL03.A,PTR,PTR-PYL-03,TM,A,A,400.0,0.0,Arus penyulang,False
+PTR.PYL03.CB,PTR,PTR-PYL-03,TS,CB_STATUS,,,,Status PMT 20 kV,False
+PTR.PYL03.PROT,PTR,PTR-PYL-03,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+PTR.PYL05.A,PTR,PTR-PYL-05,TM,A,A,400.0,0.0,Arus penyulang,True
+PTR.PYL05.CB,PTR,PTR-PYL-05,TS,CB_STATUS,,,,Status PMT 20 kV,False
+PTR.PYL05.PROT,PTR,PTR-PYL-05,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+LAE.PYL01.A,LAE,LAE-PYL-01,TM,A,A,400.0,0.0,Arus penyulang,False
+LAE.PYL01.CB,LAE,LAE-PYL-01,TS,CB_STATUS,,,,Status PMT 20 kV,False
+LAE.PYL01.PROT,LAE,LAE-PYL-01,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+SML.PYL01.A,SML,SML-PYL-01,TM,A,A,400.0,0.0,Arus penyulang,False
+SML.PYL01.CB,SML,SML-PYL-01,TS,CB_STATUS,,,,Status PMT 20 kV,False
+SML.PYL01.PROT,SML,SML-PYL-01,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+BTM.PYL02.A,BTM,BTM-PYL-02,TM,A,A,400.0,0.0,Arus penyulang,False
+BTM.PYL02.CB,BTM,BTM-PYL-02,TS,CB_STATUS,,,,Status PMT 20 kV,False
+BTM.PYL02.PROT,BTM,BTM-PYL-02,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+MLN.PYL01.A,MLN,MLN-PYL-01,TM,A,A,400.0,0.0,Arus penyulang,False
+MLN.PYL01.CB,MLN,MLN-PYL-01,TS,CB_STATUS,,,,Status PMT 20 kV,False
+MLN.PYL01.PROT,MLN,MLN-PYL-01,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+MLN.PYL02.A,MLN,MLN-PYL-02,TM,A,A,400.0,0.0,Arus penyulang,True
+MLN.PYL02.CB,MLN,MLN-PYL-02,TS,CB_STATUS,,,,Status PMT 20 kV,False
+MLN.PYL02.PROT,MLN,MLN-PYL-02,TS,PROTEKSI,,,,Sinyal OCR/GFR/UFR,False
+LSR.BUS150.KV,LSR,LSR-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+LSR.RTU.COMM,LSR,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+LSR.GI.ALARM,LSR,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+KRB.BUS150.KV,KRB,KRB-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+KRB.RTU.COMM,KRB,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+KRB.GI.ALARM,KRB,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+SMB.BUS150.KV,SMB,SMB-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+SMB.RTU.COMM,SMB,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+SMB.GI.ALARM,SMB,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+PTR.BUS150.KV,PTR,PTR-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+PTR.RTU.COMM,PTR,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+PTR.GI.ALARM,PTR,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+LAE.BUS150.KV,LAE,LAE-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+LAE.RTU.COMM,LAE,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+LAE.GI.ALARM,LAE,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+SML.BUS150.KV,SML,SML-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+SML.RTU.COMM,SML,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+SML.GI.ALARM,SML,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+BTM.BUS150.KV,BTM,BTM-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+BTM.RTU.COMM,BTM,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+BTM.GI.ALARM,BTM,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+MLN.BUS150.KV,MLN,MLN-BUS-150,TM,KV,kV,157.5,142.5,Tegangan busbar 150 kV,True
+MLN.RTU.COMM,MLN,,TS,RTU_COMM,,,,Status komunikasi RTU ke master station,False
+MLN.GI.ALARM,MLN,,TS,ALARM_UMUM,,,,"Alarm umum GI (SF6, DC, charger)",False
+LSR.SYS.HZ,LSR,LSR-BUS-150,TM,HZ,Hz,50.5,49.5,Frekuensi sistem (diukur di GI Losari),True

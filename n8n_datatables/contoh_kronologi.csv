@@ -1,0 +1,11 @@
+no,kronologi,kategori_kunci
+1,"Pkl 15.40 PMT 150 kV penghantar arah GI Karebosi trip, distance Z1 fasa R, A/R berhasil. Hujan petir di sekitar jalur.",PETIR
+2,"Penyulang trip OCR, yantek menemukan layang-layang dengan benang gelasan tersangkut di JTM.",LAYANG2
+3,"GFR kerja saat hujan angin, ditemukan ranting pohon menyentuh JTM, dilakukan rabas.",POHON
+4,Ditemukan bangkai ular di kubikel outgoing setelah penyulang trip OCR.,BINATANG
+5,"Trafo trip differential dan Buchholz, hasil DGA menunjukkan asetilen tinggi.",PERALATAN
+6,"GFR trip tanpa arus gangguan berarti di rekaman relay, patroli tidak menemukan titik gangguan, cuaca cerah.",PROTEKSI_MALKERJA
+7,"Lengan crane proyek terlalu dekat dengan konduktor, distance Z1 trip, A/R gagal.",EKSTERNAL
+8,"Penghantar trip Z1 dini hari cuaca cerah, A/R berhasil, patroli tidak menemukan apa pun.",BELUM_DIKETAHUI
+9,"Frekuensi turun ke 49,4 Hz akibat unit pembangkit trip, UFR tahap 1 melepas tiga penyulang.",EKSTERNAL
+10,"CT fasa S di kubikel outgoing meledak, kubikel diisolasi.",PERALATAN

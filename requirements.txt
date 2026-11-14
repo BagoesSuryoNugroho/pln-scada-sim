@@ -1,0 +1,8 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pandas==3.0.6
+numpy==2.5.4
+# hanya untuk DATA_BACKEND=mysql / seed_mysql
+SQLAlchemy>=2.0
+PyMySQL>=1.1
+cryptography>=43
