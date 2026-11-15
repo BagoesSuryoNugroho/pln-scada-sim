@@ -44,6 +44,7 @@ def keys_for(v):
     os.environ["API_KEYS"] = v
     try: return M._load_keys()
     finally: os.environ["API_KEYS"] = _old
+check("health memuat versi rilis", h.get("versi") == M.APP_VERSION, str(h.get("versi")))
 check("health anonim: tanpa nama database", "database" not in h)
 check("health key grup: tanpa nama database", "database" not in call("GET", "/health", request=FakeReq("key-a")))
 ht = call("GET", "/health", request=FakeReq("key-t"))

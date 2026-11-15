@@ -18,6 +18,8 @@ from pydantic import BaseModel, Field
 from simcore import kb as KB
 from simcore.store import SIM_OVERRIDE, BadRequest, DataStore, NotFound
 
+APP_VERSION = "1.3.0"   # naikkan setiap rilis; update_code.sh menunggu /health menampilkan versi ini
+
 DESCRIPTION = """
 API **simulasi** data SCADA untuk pelatihan RevoU x PLN Makassar. Semua nama gardu induk,
 kejadian, dan angka adalah **fiktif**.
@@ -44,7 +46,7 @@ TAGS = [
     {"name": "Feed mentah", "description": "Data kotor untuk latihan cleaning: duplikat, format waktu campur, satuan campur."},
 ]
 
-app = FastAPI(title="SCADA Sim API (fiktif)", version="1.0.0", description=DESCRIPTION, openapi_tags=TAGS)
+app = FastAPI(title="SCADA Sim API (fiktif)", version=APP_VERSION, description=DESCRIPTION, openapi_tags=TAGS)
 store = DataStore.from_env()
 
 
@@ -132,7 +134,7 @@ Page = Query(1, ge=1, description="Nomor halaman, mulai dari 1")
 @app.get("/health", tags=["Master"], summary="Cek API hidup (tanpa API key; key trainer menampilkan detail tambahan)")
 def health(request: Request):
     now = store.now()
-    out = {"status": "ok", "waktu_simulasi_wita": (now + pd.Timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S") + "+08:00",
+    out = {"status": "ok", "versi": APP_VERSION, "waktu_simulasi_wita": (now + pd.Timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S") + "+08:00",
            "backend": os.getenv("DATA_BACKEND", "csv"), "kunci_dimuat": len(API_KEYS),
            "kunci_bawaan_aktif": "dev-key" in API_KEYS, "catatan": "Data fiktif untuk pelatihan"}
     # Detail hanya untuk key trainer: NAMA database (tanpa host/user/password)

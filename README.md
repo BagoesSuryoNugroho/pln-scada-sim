@@ -18,7 +18,7 @@ Peserta cukup memanggil API dari n8n; tidak ada yang perlu diinstal di laptop me
 | `data/` | Dataset hasil generate (CSV/CSV.gz) |
 | `kb/` | 7 dokumen SOP/IK fiktif untuk vector store (disajikan API di `/api/v1/kb`) |
 | `n8n_datatables/` | CSV siap impor ke n8n Data Tables: uji chatbot, contoh kronologi |
-| `tests/smoke_test.py` | 46 cek otomatis untuk semua endpoint |
+| `tests/smoke_test.py` | 47 cek otomatis untuk semua endpoint |
 | `KUNCI_TRAINER.md` | Pola yang ditanam, jadwal kejadian "live", kunci jawaban (jangan dibagikan ke peserta) |
 
 ## Jalankan di laptop (trainer)
@@ -26,7 +26,7 @@ Peserta cukup memanggil API dari n8n; tidak ada yang perlu diinstal di laptop me
 ```bash
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python tests/smoke_test.py                              # opsional, 46 cek
+python tests/smoke_test.py                              # opsional, 47 cek
 uvicorn app.main:app --reload
 # buka http://localhost:8000/docs, klik Authorize, isi: dev-key
 ```

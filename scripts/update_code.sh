@@ -189,15 +189,28 @@ esac
 
 # ---------------------------------------------------------------- periksa deploy
 command -v curl >/dev/null 2>&1 || { say "curl tidak ada; periksa $BASE/health secara manual."; exit 0; }
-say "Menunggu kode baru aktif di $BASE (maks ${WAIT_MAX}s) ..."
-DEADLINE=$(( $(date +%s) + WAIT_MAX ))
+# Versi yang diharapkan dibaca dari main.py di repo (setelah disalin). Memeriksa field yang
+# sudah ada di rilis lama (mis. kunci_dimuat) akan salah mengira kode baru sudah aktif.
+EXPECT_VER="$(sed -n 's/^APP_VERSION *= *"\(.*\)".*/\1/p' "$REPO/app/main.py" | head -1)"
 new_code_live() {  # tanpa pipeline: aman terhadap pipefail
   local out; out="$(curl -s -m 15 "$BASE/health" || true)"
+  if [ -n "$EXPECT_VER" ]; then
+    case "$out" in
+      *"\"versi\":\"$EXPECT_VER\""*|*"\"versi\": \"$EXPECT_VER\""*) return 0 ;;
+      *) return 1 ;;
+    esac
+  fi
   case "$out" in *kunci_dimuat*) return 0 ;; *) return 1 ;; esac
 }
+if [ -n "$EXPECT_VER" ]; then
+  say "Menunggu kode versi $EXPECT_VER aktif di $BASE (maks ${WAIT_MAX}s) ..."
+else
+  say "Menunggu kode baru aktif di $BASE (maks ${WAIT_MAX}s; tanpa penanda versi, pemeriksaan kurang tegas) ..."
+fi
+DEADLINE=$(( $(date +%s) + WAIT_MAX ))
 until new_code_live; do
   if [ "$(date +%s)" -ge "$DEADLINE" ]; then
-    echo "Waktu habis: /health belum menampilkan kunci_dimuat (kode baru belum aktif)." >&2
+    echo "Waktu habis: /health belum menunjukkan versi ${EXPECT_VER:-baru} (kode baru belum aktif)." >&2
     echo "Cek Railway -> Deployments. Bila memakai --deploy push, kemungkinan auto-deploy belum aktif: pakai --deploy up." >&2
     exit 1
   fi
