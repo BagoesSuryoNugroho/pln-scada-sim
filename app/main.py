@@ -129,12 +129,16 @@ Page = Query(1, ge=1, description="Nomor halaman, mulai dari 1")
 
 
 # ------------------------------------------------------------------ umum
-@app.get("/health", tags=["Master"], summary="Cek API hidup (tanpa API key)")
-def health():
+@app.get("/health", tags=["Master"], summary="Cek API hidup (tanpa API key; key trainer menampilkan detail tambahan)")
+def health(request: Request):
     now = store.now()
-    return {"status": "ok", "waktu_simulasi_wita": (now + pd.Timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S") + "+08:00",
-            "backend": os.getenv("DATA_BACKEND", "csv"), "kunci_dimuat": len(API_KEYS),
-            "kunci_bawaan_aktif": "dev-key" in API_KEYS, "catatan": "Data fiktif untuk pelatihan"}
+    out = {"status": "ok", "waktu_simulasi_wita": (now + pd.Timedelta(hours=8)).strftime("%Y-%m-%dT%H:%M:%S") + "+08:00",
+           "backend": os.getenv("DATA_BACKEND", "csv"), "kunci_dimuat": len(API_KEYS),
+           "kunci_bawaan_aktif": "dev-key" in API_KEYS, "catatan": "Data fiktif untuk pelatihan"}
+    # Detail hanya untuk key trainer: NAMA database (tanpa host/user/password)
+    if API_KEYS.get(request.headers.get("x-api-key", "")) in TRAINER_GROUPS:
+        out["database"] = store.db_name
+    return out
 
 
 @app.get("/api/v1/substations", tags=["Master"], summary="Daftar gardu induk")

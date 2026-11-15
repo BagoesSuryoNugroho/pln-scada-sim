@@ -35,13 +35,23 @@ except HTTPException as e: check("403 key salah", e.status_code == 403)
 check("key valid -> nama grup", M.require_key("key-a") == "grup-a")
 
 g = "grup-a"
-h = call("GET", "/health")
+class FakeReq:
+    def __init__(self, key=None): self.headers = {"x-api-key": key} if key else {}
+h = call("GET", "/health", request=FakeReq())
 check("health", h["status"] == "ok" and h["kunci_dimuat"] == 2 and h["kunci_bawaan_aktif"] is False, str(h["kunci_dimuat"]) + " key")
 _old = os.environ.get("API_KEYS")
 def keys_for(v):
     os.environ["API_KEYS"] = v
     try: return M._load_keys()
     finally: os.environ["API_KEYS"] = _old
+check("health anonim: tanpa nama database", "database" not in h)
+check("health key grup: tanpa nama database", "database" not in call("GET", "/health", request=FakeReq("key-a")))
+ht = call("GET", "/health", request=FakeReq("key-t"))
+check("health key trainer: memuat field database (None pada mode csv)", "database" in ht and ht["database"] is None)
+from simcore.store import parse_db_name
+check("parse_db_name hanya mengambil nama", parse_db_name("mysql://u:p@mysql.railway.internal:3306/scada_sim") == "scada_sim")
+check("parse_db_name tahan pymysql dan query", parse_db_name("mysql+pymysql://u:p@h:1/abc?ssl=1") == "abc")
+check("parse_db_name kosong -> None", parse_db_name("mysql://u:p@h:1") is None and parse_db_name(None) is None)
 check("API_KEYS kosong -> dev-key", keys_for("") == {"dev-key": "dev"})
 check("API_KEYS valid dipecah", keys_for("a:K1,b:K2") == {"K1": "a", "K2": "b"})
 check("API_KEYS bertanda kutip dibersihkan", keys_for('"a:K1,b:K2"') == {"K1": "a", "K2": "b"})

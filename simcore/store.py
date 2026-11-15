@@ -102,6 +102,7 @@ def _hash(series: pd.Series) -> np.ndarray:
 class DataStore:
     def __init__(self, frames: dict[str, pd.DataFrame], engine=None):
         self.engine = engine
+        self.db_name: str | None = None   # diisi oleh from_mysql
         self.gi = frames["gardu_induk"]
         self.bay = frames["bay"]
         self.point = frames["scada_point"]
@@ -138,7 +139,9 @@ class DataStore:
         frames = {}
         for name, (_, dates) in TABLES.items():
             frames[name] = pd.read_sql_table(name, engine, parse_dates=dates or None)
-        return cls(frames, engine=engine)
+        store = cls(frames, engine=engine)
+        store.db_name = parse_db_name(url)
+        return store
 
     @classmethod
     def from_env(cls) -> "DataStore":
@@ -510,6 +513,15 @@ class DataStore:
         if group:
             return [r for r in self.reports if r["grup"] == group]
         return list(self.reports)
+
+
+def parse_db_name(url: str | None) -> str | None:
+    """Ambil NAMA database saja dari URL koneksi (tanpa host, user, atau password)."""
+    if not url:
+        return None
+    from urllib.parse import urlparse
+    name = urlparse(url).path.lstrip("/").split("?")[0]
+    return name or None
 
 
 def normalize_mysql_url(url: str) -> str:
